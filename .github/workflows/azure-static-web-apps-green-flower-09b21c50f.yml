@@ -35,7 +35,7 @@ jobs:
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
+    runs-on: window-latest
     name: Close Pull Request Job
     steps:
       - name: Close Pull Request
@@ -44,3 +44,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GREEN_FLOWER_09B21C50F }}
           action: "close"
+          app_location: "/"
